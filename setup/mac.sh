@@ -47,11 +47,19 @@ mkdir ~/Projects
 
 # Install applications.
 brew install --cask docker
+brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask intellij-idea-ce
 brew install --cask iterm2
 brew install --cask postman
 brew install --cask slack
+
+# Install binaries.
+brew install apache-spark
+brew install kafka
+brew install openjdk
+brew install sbt
+brew install scala
 
 # Modify the default dock.
 brew install dockutil
