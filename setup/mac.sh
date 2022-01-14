@@ -55,9 +55,9 @@ brew install --cask postman
 brew install --cask slack
 
 # Install binaries.
+brew install openjdk
 brew install apache-spark
 brew install kafka
-brew install openjdk
 brew install sbt
 brew install scala
 
@@ -80,8 +80,7 @@ dockutil --remove 'Préférences Système'
 dockutil --remove 'Rappels'
 dockutil --remove 'TV'
 
-# Install terminal utilitaries.
-## Install Oh My Zsh and Powerlevel10k.
+# Install terminal utilitaries (Oh My Zsh and Powerlevel10k).
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 exec zsh
