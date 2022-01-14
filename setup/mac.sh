@@ -5,12 +5,20 @@
 # Ask for the administrator password upfront.
 sudo -v
 
+DEFAULT_SRC_DIR=Projects
+
+echo "Mac Setup"
+echo ""
+
+read -r -p "$(echo "What is your source directory in your home directory [default:$DEFAULT_SRC_DIR]? ")" SRC_DIR
+if [ "$SRC_DIR" = "" ]; then SRC_DIR=$DEFAULT_SRC_DIR; fi
+
 # Ask for user information
-echo What is your git email ?
+echo What is your git email?
 read GIT_EMAIL
-echo What is your git username ?
+echo What is your git username?
 read GIT_USERNAME
-echo Do you have the apple chip (y/n) ? 
+echo Do you have the apple chip (y/n)?
 read APPLE_CHIP
 
 if [ $APPLE_CHIP == "y" ]; then
@@ -43,7 +51,7 @@ git config --global user.name $GIT_USERNAME
 git config --global user.email $GIT_EMAIL
 
 # Create Projects folder.
-mkdir ~/Projects
+mkdir ~/$SRC_DIR
 
 # Install applications.
 brew install --cask docker
