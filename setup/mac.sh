@@ -60,6 +60,7 @@ brew install apache-spark
 brew install kafka
 brew install sbt
 brew install scala
+brew install gnupg
 
 # Modify the default dock.
 brew install dockutil
